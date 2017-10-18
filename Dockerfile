@@ -1,7 +1,8 @@
 FROM maven:3.5.0-alpine
 MAINTAINER thibaut.mottet@pupscan.fr
 
-RUN apk add --update docker
+RUN apk add --update docker py-pip
+RUN pip install runlike
 
 WORKDIR /workspace
 COPY . .
